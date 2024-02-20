@@ -6,16 +6,20 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 
+import styles from "./App.module.css";
+
 function App() {
   return (
-    <div>
+    <div className={styles.app}>
       <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Technologies />
-      <Contact />
-      <Footer />
+      <div className={styles.container}>
+        <Hero />
+        <About />
+        <Projects />
+        <Technologies />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,8 +1,10 @@
 import styles from "./Header.module.css";
+import Logo from "./Logo";
 
 function Header() {
   return (
     <div className={styles.header}>
+      <Logo />
       <ul>
         <li>Home</li>
         <li>About</li>
