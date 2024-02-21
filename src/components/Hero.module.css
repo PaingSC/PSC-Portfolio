@@ -1,5 +1,15 @@
+.hero {
+  min-height: calc(100vh - 5.6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+
 .heroName {
-  font-size: 39px;
+  font-size: 2.8rem;
   color: var(--secondary-color);
 }
 
@@ -11,6 +21,7 @@
   color: var(--secondary-color);
 }
 .name {
+  font-size: 3.2rem;
   color: transparent;
   font-weight: bold;
   -webkit-background-clip: text;
@@ -25,4 +36,9 @@
     #003980 50%,
     #001f4d 100%
   );
+}
+.text {
+  width: 100%;
+  color: var(--sub-color);
+  color: var(--accent-color);
 }
