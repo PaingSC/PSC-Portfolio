@@ -40,5 +40,5 @@
 .text {
   width: 100%;
   color: var(--sub-color);
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
 }
