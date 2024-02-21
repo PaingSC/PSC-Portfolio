@@ -1,3 +1,5 @@
+// import { motion } from "framer-motion";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -13,6 +15,11 @@ function App() {
     <div className={styles.app}>
       <Header />
       <div className={styles.container}>
+        {/* <motion.div
+          initial={{ scale: 0, x: -900 }}
+          animate={{ scale: 1, x: 0 }}
+        >
+        </motion.div> */}
         <Hero />
         <About />
         <Projects />

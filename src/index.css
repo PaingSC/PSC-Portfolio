@@ -65,5 +65,4 @@ body,
 html {
   height: 100%; /* Makes the body element full screen */
   scroll-behavior: smooth; /* Makes normal scrolling smooth */
-  line-height: 1.75;
 }

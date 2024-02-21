@@ -1,9 +1,18 @@
-.logo {
+.heroName {
+  font-size: 39px;
+  color: var(--secondary-color);
+}
+
+.heroName p {
+  width: fit-content;
+}
+
+.greet {
+  color: var(--secondary-color);
+}
+.name {
   color: transparent;
   font-weight: bold;
-  font-size: 2.6rem;
-  line-height: 1;
-  cursor: pointer;
   -webkit-background-clip: text;
   background-clip: text;
   /* background-image: linear-gradient(90deg, #fff 0%, var(--accent-color) 100%); */
