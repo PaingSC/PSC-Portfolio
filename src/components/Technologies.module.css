@@ -1,0 +1,22 @@
+.techSection {
+  margin-block: 10rem;
+}
+
+.skillSet {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 3.5rem;
+}
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.skillList img {
+  max-width: 7rem;
+}
