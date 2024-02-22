@@ -14,13 +14,13 @@ function App() {
   return (
     <div className={styles.app}>
       <Header />
+      <Hero />
       <div className={styles.container}>
         {/* <motion.div
           initial={{ scale: 0, x: -900 }}
           animate={{ scale: 1, x: 0 }}
         >
         </motion.div> */}
-        <Hero />
         <About />
         <Projects />
         <Technologies />

@@ -5,3 +5,24 @@
 .introduction {
   text-align: justify;
 }
+
+.downloadCV {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.downloadCV a {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--secondary-color);
+}
+
+.downloadCV span {
+  width: 2rem;
+}

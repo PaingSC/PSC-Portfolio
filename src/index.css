@@ -58,7 +58,13 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition: none;
+    font-size: inherit;
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body,

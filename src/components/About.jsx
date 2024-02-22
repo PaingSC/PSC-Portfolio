@@ -1,8 +1,9 @@
 import styles from "./About.module.css";
+import { GoDownload } from "react-icons/go";
 
 function About() {
   return (
-    <div className={styles.about}>
+    <section className={styles.about}>
       <h3>
         About
         <span>Introduction</span>
@@ -20,8 +21,14 @@ function About() {
           leveraging technology to shape the future of the web. Let's connect
           and explore the possibilities together!`}
         </p>
+        <div className={styles.downloadCV}>
+          <a href="/Paing_Soe_Chit_CV.pdf" target="_blank">
+            Download{" "}
+            <GoDownload style={{ width: "1.8rem", paddingBottom: "0.3rem" }} />
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

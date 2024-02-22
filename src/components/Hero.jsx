@@ -60,7 +60,7 @@ function Hero() {
         </motion.h2>
         <motion.p
           className={styles.text}
-          initial={{ x: "calc(100% + 20px)" }}
+          initial={{ x: "calc(100vw + 20px)" }}
           animate={{ x: 0 }}
           transition={{ type: "tween", delay: 2.8, duration: 1.2 }}
         >
