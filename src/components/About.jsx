@@ -9,8 +9,8 @@ function About() {
       </h3>
       <div className={styles.introduction}>
         <p>
-          {`Hello! I'm Paing Soe Chit, a front-end web developer from [Your
-          City/Country]. Fascinated by the intersection of design and
+          {`Hello! I'm Paing Soe Chit, a front-end web developer from 
+        Myanmar. Fascinated by the intersection of design and
           technology, I've dedicated myself to crafting immersive digital
           experiences that blend creativity with functionality. With expertise
           in HTML, CSS, JavaScript, and React.js, I prioritize clean code and
