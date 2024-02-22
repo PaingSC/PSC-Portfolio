@@ -7,7 +7,7 @@ function Hero() {
   // const [isRotate, setIsRotate] = useState(false);
   // console.log(setIsRotate);
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} id="home">
       {/* <motion.div
         animate={{ rotate: isRotate ? 360 : 0 }}
         transition={{ type: "spring", duration: 1, delay: 0.1 }}

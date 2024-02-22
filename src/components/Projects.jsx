@@ -35,7 +35,7 @@ console.log(projects);
 
 function Projects() {
   return (
-    <section>
+    <section id="projects">
       <h3>
         Projects<span>Things I’ve built so far</span>
       </h3>

@@ -65,7 +65,7 @@ console.log(languages);
 
 function Technologies() {
   return (
-    <section className={styles.techSection}>
+    <section className={styles.techSection} id="technologies">
       <h3>
         Technologies<span>{`Technologies I've been working with`}</span>
       </h3>

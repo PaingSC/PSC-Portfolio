@@ -3,7 +3,7 @@ import { GoDownload } from "react-icons/go";
 
 function About() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <h3>
         About
         <span>Introduction</span>

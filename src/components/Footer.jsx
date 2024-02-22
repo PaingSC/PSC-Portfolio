@@ -1,8 +1,31 @@
+import Logo from "./Logo";
+import Navi from "./Navi";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { TfiEmail } from "react-icons/tfi";
+
+import styles from "./Footer.module.css";
+
 function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <footer className={styles.footer}>
+      <div className={styles.logoContact}>
+        <Logo />
+        <div className={styles.contact}>
+          <a href="tel:+959456507434">
+            <MdOutlinePhoneInTalk /> 09-45650-7434
+          </a>
+          <a href="mailto:example@example.com">
+            <TfiEmail /> paingsoechit.job@gmail.com
+          </a>
+        </div>
+      </div>
+      <div className={styles.footerNavi}>
+        <Navi />
+      </div>
+      <p className={styles.talk}>
+        I program fueled by passion and a cup of steaming coffee ☕️
+      </p>
+    </footer>
   );
 }
 
