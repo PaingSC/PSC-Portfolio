@@ -69,3 +69,13 @@
   color: var(--text-color);
   color: var(--secondary-color);
 }
+
+/* Go To Top Button */
+
+.goToTop {
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  display: inline-block;
+  border: none;
+}

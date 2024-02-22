@@ -3,11 +3,16 @@ import Navi from "./Navi";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 
+// import { BsArrowUpSquareFill } from "react-icons/bs";
+
 import styles from "./Footer.module.css";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
+      {/* <a href="#home" className={styles.goToTop}>
+        <BsArrowUpSquareFill style={{ width: "4rem" }} />
+      </a> */}
       <div className={styles.logoContact}>
         <Logo />
         <div className={styles.contact}>
