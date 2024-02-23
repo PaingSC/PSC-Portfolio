@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import styles from "./ContactForm.module.css";
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     subject: "",
@@ -30,19 +32,8 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Subject:</label>
-        <input
-          type="text"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-          placeholder="Subject"
-          required
-        />
-      </div>
-      <div>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <div className={styles.inputWrapper}>
         <label>Your Name:</label>
         <input
           type="text"
@@ -53,7 +44,7 @@ function ContactForm() {
           required
         />
       </div>
-      <div>
+      <div className={styles.inputWrapper}>
         <label>Your Email:</label>
         <input
           type="email"
@@ -64,7 +55,18 @@ function ContactForm() {
           required
         />
       </div>
-      <div>
+      <div className={styles.inputWrapper}>
+        <label>Subject:</label>
+        <input
+          type="text"
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
+          placeholder="Subject"
+          required
+        />
+      </div>
+      <div className={styles.inputWrapper}>
         <label>Your Message:</label>
         <textarea
           name="message"
@@ -74,7 +76,9 @@ function ContactForm() {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className={styles.submitBtn}>
+        Submit
+      </button>
     </form>
   );
 }

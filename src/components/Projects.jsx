@@ -35,7 +35,7 @@ console.log(projects);
 
 function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className={styles.projectSec}>
       <h3>
         Projects<span>Things I’ve built so far</span>
       </h3>
@@ -43,7 +43,7 @@ function Projects() {
       <ul className={styles.projectList}>
         {projects.map((project) => (
           <li key={project.name}>
-            <a href="">
+            <a href={project.link} target="_blank" rel="noreferrer">
               <div className={styles.imageWrapper}>
                 <img src={project.image} alt="" />
               </div>
@@ -60,3 +60,7 @@ function Projects() {
 }
 
 export default Projects;
+
+<a href="#">
+  <img src="/cover" alt="" />
+</a>;

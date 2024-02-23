@@ -5,8 +5,8 @@ function Contact() {
     <section id="contact">
       <h3>
         Contact<span>Join me for greatness</span>
-        <ContactForm />
       </h3>
+      <ContactForm />
     </section>
   );
 }

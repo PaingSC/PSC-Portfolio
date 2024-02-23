@@ -6,6 +6,7 @@ import { TfiEmail } from "react-icons/tfi";
 // import { BsArrowUpSquareFill } from "react-icons/bs";
 
 import styles from "./Footer.module.css";
+import Test from "./Test";
 
 function Footer() {
   return (
@@ -13,6 +14,7 @@ function Footer() {
       {/* <a href="#home" className={styles.goToTop}>
         <BsArrowUpSquareFill style={{ width: "4rem" }} />
       </a> */}
+      <Test />
       <div className={styles.logoContact}>
         <Logo />
         <div className={styles.contact}>

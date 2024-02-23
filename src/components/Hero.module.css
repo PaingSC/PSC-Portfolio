@@ -1,5 +1,6 @@
 .hero {
-  min-height: calc(100vh - 5.6rem);
+  background: cyan;
+  min-height: calc(100vh - 6.3rem);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -66,12 +67,17 @@
 @media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
-    gap: 6rem;
+    gap: 8rem;
+    justify-content: center;
     /* background-size: 55%;
     background-position: center bottom 70px;
     padding-top: 15rem; */
   }
   .heroWrapper {
     max-width: 100%;
+  }
+
+  .image {
+    max-width: 80%;
   }
 }

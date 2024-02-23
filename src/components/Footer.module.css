@@ -1,16 +1,6 @@
 .footer {
-  /* color: var(--secondary-color); */
   color: var(--logo-color);
-  /* border-top: 1px solid var(--secondary-color); */
   position: relative;
-  /* background-color: var(--secondary-color); */
-  /* background-image: linear-gradient(
-    to bottom,
-    var(--primary-color),
-    var(--secondary-color),
-    #6dbb5e
-  ); */
-  /* background-color: #6dbb5e; */
   padding: 5rem 4rem;
   margin-top: 8rem;
   box-shadow: 0px -1px 5px -3px rgba(40, 167, 69, 0.75);
@@ -78,4 +68,14 @@
   bottom: 4rem;
   display: inline-block;
   border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-inline: 2rem;
+  }
+
+  .contact {
+    gap: 1rem;
+  }
 }

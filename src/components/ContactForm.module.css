@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--secondary-color);
+}
+
+input,
+textarea {
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+input:focus {
+  border: 0.1rem solid var(--secondary-color);
+  border-color: #007bff;
+}
+
+.submitBtn {
+  font-weight: 500;
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--secondary-color);
+  align-self: center;
+  min-width: 12.4rem;
+  margin-top: 3rem;
+}

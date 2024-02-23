@@ -5,8 +5,8 @@
 .skillSet {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  margin-top: 3.5rem;
+  gap: 5.5rem;
+  margin-top: 4.5rem;
 }
 .skillList {
   list-style: none;
@@ -19,4 +19,19 @@
 
 .skillList img {
   max-width: 7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .skillList img {
+    max-width: 5rem;
+  }
+
+  .skillList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
 }
