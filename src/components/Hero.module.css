@@ -1,6 +1,5 @@
 .hero {
-  background: cyan;
-  min-height: calc(100vh - 6.3rem);
+  min-height: calc(100vh - 6.5rem);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -78,6 +77,6 @@
   }
 
   .image {
-    max-width: 80%;
+    max-width: 70%;
   }
 }

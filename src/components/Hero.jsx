@@ -20,7 +20,7 @@ function Hero() {
         <motion.h2 className={styles.heroName}>
           <motion.p
             className={styles.greet}
-            initial={{ x: "calc(-100% - 20px)" }}
+            initial={{ x: "calc(-100% - -4rem)" }}
             animate={{ x: 0 }}
             transition={{ type: "tween", delay: 0, duration: 0.5 }}
           >
@@ -43,7 +43,7 @@ function Hero() {
 
           <motion.p
             className={styles.name}
-            initial={{ x: "calc(-100% - 20px)" }}
+            initial={{ x: "calc(-100% - 4rem)" }}
             animate={{ x: 0 }}
             transition={{ delay: 0.6, duration: 1.3 }}
           >
@@ -51,7 +51,7 @@ function Hero() {
           </motion.p>
           <motion.p
             className={styles.role}
-            initial={{ x: "calc(-100% - 20px)" }}
+            initial={{ x: "calc(-100% - 4rem)" }}
             animate={{ x: 0 }}
             transition={{ delay: 1.8, duration: 1.3 }}
           >
@@ -60,7 +60,7 @@ function Hero() {
         </motion.h2>
         <motion.p
           className={styles.text}
-          initial={{ x: "calc(100vw + 20px)" }}
+          initial={{ x: "calc(100vw + 4rem)" }}
           animate={{ x: 0 }}
           transition={{ type: "tween", delay: 2.8, duration: 1.2 }}
         >

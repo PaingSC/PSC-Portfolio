@@ -1,5 +1,5 @@
 .projectSec {
-  padding-block: 5rem 0;
+  padding-block: 5rem;
 }
 
 .projectList {
@@ -37,7 +37,7 @@
 }
 
 .projectList li a:hover img {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .imageWrapper {

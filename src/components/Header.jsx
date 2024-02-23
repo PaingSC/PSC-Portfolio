@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CgMenu } from "react-icons/cg";
+import { IoClose } from "react-icons/io5";
 
 import Logo from "./Logo";
 import Navi from "./Navi";
@@ -36,20 +37,31 @@ function Header() {
       <div className={styles.header}>
         <Logo />
         {isSmallScreen ? (
-          <CgMenu
-            style={{ color: `var(--primary-color)` }}
-            className={styles.menuBtn}
-            onClick={() => {
-              console.log("clicked!");
-              handleMenuToggle();
-            }}
-          />
+          isMenuOn ? (
+            <IoClose
+              style={{ color: `var(--primary-color)` }}
+              className={styles.menuBtn}
+              onClick={() => {
+                console.log("clicked!");
+                handleMenuToggle();
+              }}
+            />
+          ) : (
+            <CgMenu
+              style={{ color: `var(--primary-color)` }}
+              className={styles.menuBtn}
+              onClick={() => {
+                console.log("clicked!");
+                handleMenuToggle();
+              }}
+            />
+          )
         ) : (
           <Navi />
         )}
       </div>
       {isMenuOn ? (
-        <div className={styles.headerNavi}>
+        <div className={styles.headerNavi} onClick={() => handleMenuToggle()}>
           <Navi />
         </div>
       ) : null}

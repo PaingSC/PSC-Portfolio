@@ -18,7 +18,7 @@
 
 .menuBtn {
   width: 3.5rem;
-  height: 4rem;
+  height: auto;
   cursor: pointer;
 }
 
@@ -26,7 +26,7 @@
 .headerNavi {
   position: fixed;
   right: 0;
-  top: 6.8rem;
+  top: 6.4rem;
   background-color: var(--background-color);
   padding: 1rem 2rem;
   border-radius: 0 0 0 1.5rem;
@@ -39,4 +39,6 @@
 .headerNavi nav ul {
   flex-direction: column;
   gap: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
 }

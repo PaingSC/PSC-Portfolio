@@ -1,8 +1,13 @@
 import { useState } from "react";
 
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { TfiEmail } from "react-icons/tfi";
+
 import styles from "./ContactForm.module.css";
 
 function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const [formData, setFormData] = useState({
     subject: "",
     name: "",
@@ -22,13 +27,14 @@ function ContactForm() {
     const emailContent = `Subject: ${subject}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
     // You can use any method to send an email, such as an API call or a library like nodemailer
     console.log("Sending email:", emailContent);
-    alert("Your message has been sent successfully!");
+    // alert("Your message has been sent successfully!");
     setFormData({
       subject: "",
       name: "",
       email: "",
       message: "",
     });
+    setIsSubmitted(true);
   };
 
   return (
@@ -76,7 +82,27 @@ function ContactForm() {
           required
         />
       </div>
-      <button type="submit" className={styles.submitBtn}>
+
+      {isSubmitted ? (
+        <p>
+          Unable to send the email at the moment. <br /> Please reach me at{" "}
+          <span className={styles.contactInfo}>
+            <a href="tel:+959456507434">
+              <MdOutlinePhoneInTalk /> 09-45650-7434
+            </a>{" "}
+            or{" "}
+            <a href="mailto:example@example.com">
+              <TfiEmail /> paingsoechit.job@gmail.com
+            </a>
+          </span>
+        </p>
+      ) : null}
+
+      <button
+        type="submit"
+        className={styles.submitBtn}
+        onSubmit={() => handleSubmit()}
+      >
         Submit
       </button>
     </form>
