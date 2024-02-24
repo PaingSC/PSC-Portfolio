@@ -19,7 +19,7 @@ function About() {
           inspiration in nature, photography, and literature. Looking forward,
           I'm eager to collaborate with innovative teams and organizations,
           leveraging technology to shape the future of the web. Let's connect
-          and explore the possibilities together!`}
+          and explore the possibilities together! Click the download button to access my CV.`}
         </p>
         <div className={styles.downloadCV}>
           <a href="/Paing_Soe_Chit_CV.pdf" target="_blank">
