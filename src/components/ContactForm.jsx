@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -5,7 +6,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 import styles from "./ContactForm.module.css";
 
-function ContactForm() {
+function ContactForm({ phoneNumber, emailAddress }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -87,11 +88,11 @@ function ContactForm() {
         <p>
           Unable to send the email at the moment. <br /> Please reach me at{" "}
           <span className={styles.contactInfo}>
-            <a href="tel:+959456507434">
+            <a href={`tel:${phoneNumber}`}>
               <MdOutlinePhoneInTalk /> 09-45650-7434
             </a>{" "}
             or{" "}
-            <a href="mailto:example@example.com">
+            <a href={`mailto:${emailAddress}`}>
               <TfiEmail /> paingsoechit.job@gmail.com
             </a>
           </span>

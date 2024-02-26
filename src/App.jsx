@@ -11,6 +11,10 @@ import Technologies from "./components/Technologies";
 import styles from "./App.module.css";
 
 function App() {
+  // phone number and emial address
+  const emailAddress = "paingsoechit.job@gmail.com";
+  const phoneNumber = "+959456507434";
+
   return (
     <div className={styles.app}>
       <Header />
@@ -24,9 +28,9 @@ function App() {
         <About />
         <Projects />
         <Technologies />
-        <Contact />
+        <Contact emailAddress={emailAddress} phoneNumber={phoneNumber} />
       </div>
-      <Footer />
+      <Footer emailAddress={emailAddress} phoneNumber={phoneNumber} />
     </div>
   );
 }

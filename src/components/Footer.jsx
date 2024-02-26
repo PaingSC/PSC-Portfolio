@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Logo from "./Logo";
 import Navi from "./Navi";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
@@ -7,7 +8,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 import styles from "./Footer.module.css";
 
-function Footer() {
+function Footer({ phoneNumber, emailAddress }) {
   return (
     <footer className={styles.footer}>
       {/* <a href="#home" className={styles.goToTop}>
@@ -16,10 +17,10 @@ function Footer() {
       <div className={styles.logoContact}>
         <Logo />
         <div className={styles.contact}>
-          <a href="tel:+959456507434">
+          <a href={`tel:${phoneNumber}`}>
             <MdOutlinePhoneInTalk /> 09-45650-7434
           </a>
-          <a href="mailto:example@example.com">
+          <a href={`mailto:${emailAddress}`}>
             <TfiEmail /> paingsoechit.job@gmail.com
           </a>
         </div>
