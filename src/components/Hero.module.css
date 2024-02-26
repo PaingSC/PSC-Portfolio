@@ -66,8 +66,10 @@
 @media screen and (max-width: 768px) {
   .hero {
     flex-direction: column;
-    gap: 8rem;
-    justify-content: center;
+    /* gap: 8rem; */
+    gap: 0rem;
+    /* justify-content: center; */
+    justify-content: space-evenly;
     /* background-size: 55%;
     background-position: center bottom 70px;
     padding-top: 15rem; */
