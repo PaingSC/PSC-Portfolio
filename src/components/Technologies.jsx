@@ -61,8 +61,6 @@ const developmentTools = [
   },
 ];
 
-console.log(languages);
-
 function Technologies() {
   return (
     <section className={styles.techSection} id="technologies">

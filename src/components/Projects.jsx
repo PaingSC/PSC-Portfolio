@@ -29,9 +29,14 @@ const projects = [
     description:
       "This website highlights a Japanese research institute specializing in ports and airports, powered by Movable Type CMS and developed by my team at Qualy Myanmar.",
   },
-];
 
-console.log(projects);
+  // {
+  //   title: "React Quiz",
+  //   link: "https://simple-reactquiz.netlify.app/",
+  //   image: "/projects/react_quiz.jpg",
+  //   description: `Developed in 'The Ultimate React course by Jonas Schmedtmann,' this web application showcases the use of the useReducer hook for state management in React.`,
+  // },
+];
 
 function Projects() {
   return (
@@ -41,8 +46,8 @@ function Projects() {
       </h3>
 
       <ul className={styles.projectList}>
-        {projects.map((project) => (
-          <li key={project.name}>
+        {projects.map((project, i) => (
+          <li key={i}>
             <a href={project.link} target="_blank" rel="noreferrer">
               <div className={styles.imageWrapper}>
                 <img src={project.image} alt="" />
