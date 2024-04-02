@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import Logo from "./Logo";
 import Navi from "./Navi";
-import { MdOutlinePhoneInTalk } from "react-icons/md";
+// import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 
 // import { BsArrowUpSquareFill } from "react-icons/bs";
 
 import styles from "./Footer.module.css";
 
-function Footer({ phoneNumber, emailAddress }) {
+function Footer({ emailAddress }) {
   return (
     <footer className={styles.footer}>
       {/* <a href="#home" className={styles.goToTop}>
@@ -17,9 +17,9 @@ function Footer({ phoneNumber, emailAddress }) {
       <div className={styles.logoContact}>
         <Logo />
         <div className={styles.contact}>
-          <a href={`tel:${phoneNumber}`}>
+          {/* <a href={`tel:${phoneNumber}`}>
             <MdOutlinePhoneInTalk /> 09-45650-7434
-          </a>
+          </a> */}
           <a href={`mailto:${emailAddress}`}>
             <TfiEmail /> paingsoechit.job@gmail.com
           </a>
