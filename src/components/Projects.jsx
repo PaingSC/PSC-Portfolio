@@ -1,3 +1,7 @@
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import styles from "./Projects.module.css";
 
 const projects = [
@@ -75,6 +79,15 @@ const projects = [
 ];
 
 function Projects() {
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    // autoplayy: true,
+    autoplaySpeed: 3500,
+  };
   return (
     <section id="projects" className={styles.projectSec}>
       <h3>
@@ -82,19 +95,21 @@ function Projects() {
       </h3>
 
       <ul className={styles.projectList}>
-        {projects.map((project, i) => (
-          <li key={i}>
-            <a href={project.link} target="_blank" rel="noreferrer">
-              <div className={styles.imageWrapper}>
-                <img src={project.image} alt="" />
-              </div>
-              <div className={styles.description}>
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>
-              </div>
-            </a>
-          </li>
-        ))}
+        <Slider {...settings}>
+          {projects.map((project, i) => (
+            <li key={i}>
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <div className={styles.imageWrapper}>
+                  <img src={project.image} alt="" />
+                </div>
+                <div className={styles.description}>
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </Slider>
       </ul>
     </section>
   );

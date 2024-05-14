@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 
 import styles from "./App.module.css";
+// import SimpleSlider from "./components/carousel";
 
 function App() {
   // phone number and emial address
@@ -27,6 +28,7 @@ function App() {
         </motion.div> */}
         <About />
         <Projects />
+        {/* <SimpleSlider /> */}
         <Technologies />
         <Contact emailAddress={emailAddress} phoneNumber={phoneNumber} />
       </div>
