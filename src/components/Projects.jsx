@@ -30,6 +30,42 @@ const projects = [
       "This website highlights a Japanese research institute specializing in ports and airports, powered by Movable Type CMS and developed by my team at Qualy Myanmar.",
   },
 
+  {
+    title: "KKLC",
+    link: "https://kklc.jp/",
+    image: "/projects/kklc_project.png",
+    description:
+      "This website highlights was developed by my team at Qualy Myanmar.",
+  },
+  {
+    title: "Enishi",
+    link: "https://enishi-inc.co.jp/",
+    image: "/projects/enishi_project.png",
+    description:
+      "This website highlights was developed by my team at Qualy Myanmar.",
+  },
+  {
+    title: "Yurikago",
+    link: "https://yurikago.or.jp/",
+    image: "/projects/medical_corporation_yurikago_project.png",
+    description:
+      "This website highlights was developed by my team at Qualy Myanmar.",
+  },
+  {
+    title: "Skincare",
+    link: "https://gorilla.clinic/operation/skincare/",
+    image: "/projects/skincare_project.png",
+    description:
+      "This website highlights was developed by my team at Qualy Myanmar.",
+  },
+  {
+    title: "アトリエMAR",
+    link: "https://yukoumesaki.com/",
+    image: "/projects/yukoumesaki_project.png",
+    description:
+      "This website highlights was developed by my team at Qualy Myanmar.",
+  },
+
   // {
   //   title: "React Quiz",
   //   link: "https://simple-reactquiz.netlify.app/",
