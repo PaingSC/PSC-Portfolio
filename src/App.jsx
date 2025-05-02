@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
+// import SliderTest from "./components/SliderTest";
 
 import styles from "./App.module.css";
 // import SimpleSlider from "./components/carousel";
@@ -28,6 +29,7 @@ function App() {
         </motion.div> */}
         <About />
         <Projects />
+        {/* <SliderTest /> */}
         {/* <SimpleSlider /> */}
         <Technologies />
         <Contact emailAddress={emailAddress} phoneNumber={phoneNumber} />

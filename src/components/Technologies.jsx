@@ -46,6 +46,21 @@ const frontTechnologies = [
   },
 ];
 
+const backTechnologies = [
+  {
+    image: "/technology_icon/nodejs_icon.svg",
+    altName: "NodeJS",
+  },
+  {
+    image: "/technology_icon/expressjs_icon.svg",
+    altName: "ExpressJS",
+  },
+  {
+    image: "/technology_icon/mongodb_icon.svg",
+    altName: "MongoDB",
+  },
+];
+
 const developmentTools = [
   {
     image: "/tool_icons/git_icon.svg",
@@ -82,6 +97,16 @@ function Technologies() {
           <h4>Front-end Technologies</h4>
           <ul className={styles.skillList}>
             {frontTechnologies.map((tech) => (
+              <li key={tech.altName}>
+                <img src={tech.image} alt={tech.altName} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4>Back-end Technologies</h4>
+          <ul className={styles.skillList}>
+            {backTechnologies.map((tech) => (
               <li key={tech.altName}>
                 <img src={tech.image} alt={tech.altName} />
               </li>

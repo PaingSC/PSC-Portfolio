@@ -1,4 +1,4 @@
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Legacy Cloud",
-    link: "https://shinyukai-r.or.jp/",
+    link: "https://legacy.ne.jp/",
     image: "/projects/legacy_cloud_project2.jpg",
     description:
       "Collaboratively developed with my team at Qualy Myanmar, this project is tailored for a prestigious Japanese company, seamlessly powered by WordPress.",
@@ -79,22 +79,22 @@ const projects = [
 ];
 
 function Projects() {
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    // autoplayy: true,
-    autoplaySpeed: 3500,
-  };
+  // let settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  //   // autoplayy: true,
+  //   autoplaySpeed: 3500,
+  // };
   return (
     <section id="projects" className={styles.projectSec}>
       <h3>
         Projects<span>Things I’ve built so far</span>
       </h3>
 
-      <ul className={styles.projectList}>
+      {/* <ul className={styles.projectList}>
         <Slider {...settings}>
           {projects.map((project, i) => (
             <li key={i}>
@@ -110,13 +110,27 @@ function Projects() {
             </li>
           ))}
         </Slider>
+      </ul> */}
+
+      <ul className={styles.projectList}>
+        {/* <Slider {...settings}> */}
+        {projects.map((project, i) => (
+          <li className={styles.projectItems} key={i}>
+            <a href={project.link} target="_blank" rel="noreferrer">
+              <div className={styles.imageWrapper}>
+                <img src={project.image} alt="" />
+              </div>
+              <div className={styles.description}>
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+              </div>
+            </a>
+          </li>
+        ))}
+        {/* </Slider> */}
       </ul>
     </section>
   );
 }
 
 export default Projects;
-
-<a href="#">
-  <img src="/cover" alt="" />
-</a>;

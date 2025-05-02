@@ -18,6 +18,7 @@
 }
 
 .skillList img {
+  width: 100%;
   max-width: 7rem;
 }
 
