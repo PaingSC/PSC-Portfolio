@@ -1,8 +1,11 @@
-// import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-import styles from "./Projects.module.css";
+// import { useRef, useState } from "react";
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import styles from "./Projects.module.css"; // optional for pulse animation
+import "./swiper.css";
 
 const projects = [
   {
@@ -77,60 +80,75 @@ const projects = [
   //   description: `Developed in 'The Ultimate React course by Jonas Schmedtmann,' this web application showcases the use of the useReducer hook for state management in React.`,
   // },
 ];
+console.log(projects);
 
-function Projects() {
-  // let settings = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   // autoplayy: true,
-  //   autoplaySpeed: 3500,
+const Projects = () => {
+  const swiperRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(true);
+
+  // const handlePlay = () => {
+  //   swiperRef.current?.autoplay?.start();
+  //   setIsPlaying(true);
   // };
+
+  // const handlePause = () => {
+  //   swiperRef.current?.autoplay?.stop();
+  //   setIsPlaying(false);
+  // };
+
+  // const handlePrev = () => {
+  //   swiperRef.current?.slidePrev();
+  // };
+
+  // const handleNext = () => {
+  //   swiperRef.current?.slideNext();
+  // };
+
   return (
-    <section id="projects" className={styles.projectSec}>
-      <h3>
-        Projects<span>Things I’ve built so far</span>
-      </h3>
-
-      {/* <ul className={styles.projectList}>
-        <Slider {...settings}>
-          {projects.map((project, i) => (
-            <li key={i}>
-              <a href={project.link} target="_blank" rel="noreferrer">
-                <div className={styles.imageWrapper}>
-                  <img src={project.image} alt="" />
-                </div>
-                <div className={styles.description}>
-                  <h4>{project.title}</h4>
-                  <p>{project.description}</p>
-                </div>
-              </a>
-            </li>
-          ))}
-        </Slider>
-      </ul> */}
-
-      <ul className={styles.projectList}>
-        {/* <Slider {...settings}> */}
+    <div className={styles.carousel_container}>
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        breakpoints={{
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        loop={true}
+        speed={500}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{ clickable: true }}
+        spaceBetween={20}
+      >
         {projects.map((project, i) => (
-          <li className={styles.projectItems} key={i}>
+          <SwiperSlide key={i}>
             <a href={project.link} target="_blank" rel="noreferrer">
               <div className={styles.imageWrapper}>
-                <img src={project.image} alt="" />
+                <img src={project.image} alt={project.title} />
               </div>
               <div className={styles.description}>
                 <h4>{project.title}</h4>
                 <p>{project.description}</p>
               </div>
             </a>
-          </li>
+          </SwiperSlide>
         ))}
-        {/* </Slider> */}
-      </ul>
-    </section>
+      </Swiper>
+
+      {/* <div className={styles.controls}>
+        <button onClick={handlePrev}>◀️</button>
+        <button
+          onClick={isPlaying ? handlePause : handlePlay}
+          className={isPlaying ? "" : "pulse"}
+        >
+          {isPlaying ? "❚❚ Pause" : "▶️ Play"}
+        </button>
+        <button onClick={handleNext}>▶️</button>
+      </div> */}
+    </div>
   );
-}
+};
 
 export default Projects;

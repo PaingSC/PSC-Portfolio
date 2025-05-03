@@ -1,0 +1,53 @@
+/* --------------------- */
+/* styles.css */
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto !important;
+  background: #e8e8e8;
+  border-radius: 1rem 1rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 5px 0px rgba(108, 108, 108, 0.3);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(108, 108, 108, 0.3);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(108, 108, 108, 0.3);
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+}
+
+.swiper-slide img {
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
