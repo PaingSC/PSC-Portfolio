@@ -10,6 +10,10 @@
   gap: 4rem 2.5rem;
   margin-top: 5rem;
 }
+.projectSwiper {
+  width: 100%;
+  margin-top: 5rem;
+}
 
 .projectItems {
   display: flex;

@@ -105,37 +105,42 @@ const Projects = () => {
   // };
 
   return (
-    <div className={styles.carousel_container}>
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        loop={true}
-        speed={500}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: true }}
-        spaceBetween={20}
-      >
-        {projects.map((project, i) => (
-          <SwiperSlide key={i}>
-            <a href={project.link} target="_blank" rel="noreferrer">
-              <div className={styles.imageWrapper}>
-                <img src={project.image} alt={project.title} />
-              </div>
-              <div className={styles.description}>
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>
-              </div>
-            </a>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <section className={styles.projectSec} id="projects">
+      <h3>
+        Projects<span>{`Things I've done`}</span>
+      </h3>
+      <div className={styles.projectSwiper}>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          loop={true}
+          speed={500}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          spaceBetween={20}
+        >
+          {projects.map((project, i) => (
+            <SwiperSlide key={i}>
+              <a href={project.link} target="_blank" rel="noreferrer">
+                <div className={styles.imageWrapper}>
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className={styles.description}>
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                </div>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       {/* <div className={styles.controls}>
         <button onClick={handlePrev}>◀️</button>
@@ -147,7 +152,7 @@ const Projects = () => {
         </button>
         <button onClick={handleNext}>▶️</button>
       </div> */}
-    </div>
+    </section>
   );
 };
 
